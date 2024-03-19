@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Playlist Downloader</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>YouTube Playlist Downloader</h1>
+    <form action="/download" method="post">
+        <label for="playlist_url">Enter YouTube Playlist URL:</label><br>
+        <input type="text" id="playlist_url" name="playlist_url"><br>
+        <button type="submit">Download</button>
+    </form>
+</body>
+</html>
