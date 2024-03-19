@@ -22,7 +22,7 @@ def download():
                     author = yt.author.replace("/", "_").replace(":", "_")  # Sanitize author name
                     video = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
                     if video:
-                        folder_path = os.path.join("static/Videos", author)
+                        folder_path = os.path.join("Videos", author)
                         os.makedirs(folder_path, exist_ok=True)
                         video.download(output_path=folder_path)
                         videos_downloaded += 1
